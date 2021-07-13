@@ -6,6 +6,8 @@ TagManager:
   tags:
   - FxTemporaire
   - TradeObject
+  - DropOff
+  - Pushable
   layers:
   - Default
   - TransparentFX

@@ -41,7 +41,6 @@ public class ValueCalculator : MonoBehaviour
 
         ratioBar.transform.rotation = Quaternion.Slerp(ratioBar.transform.rotation, target,  Time.deltaTime * smooth);
 
-        Debug.Log(zRot);
 
         
     }
