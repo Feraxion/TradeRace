@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,15 +11,15 @@ public class CollectTradeObjects : MonoBehaviour
     public int collectedObjects;
     public Slider playerSlider;
     public Transform holdPosition;
-
+    public Transform[] toySpots;
     public GameObject holdingGO;
-
+    private int spotCount;
     public bool isHolding;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        spotCount = 0;
     }
 
     // Update is called once per frame
@@ -73,8 +74,10 @@ public class CollectTradeObjects : MonoBehaviour
     IEnumerator wait(float value)
     {
         yield return new WaitForSeconds(value);
+        //toySpots[spotCount];
+        holdingGO.transform.SetParent(null);
+        holdingGO.transform.DOMove(toySpots[spotCount].transform.position, 1);
 
-        holdingGO.transform.parent = null;
         //holdingGO.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         holdingGO.GetComponent<Rigidbody>().useGravity = true;
         holdingGO.GetComponent<BoxCollider>().enabled = true;
@@ -82,8 +85,9 @@ public class CollectTradeObjects : MonoBehaviour
         holdingGO = null;
         gameObject.GetComponent<Animator>().SetInteger("Movement",1);
         isHolding = false;
-        
-       
+        spotCount++;
+
+
     }
     
     IEnumerator DelaySlider(int value)
