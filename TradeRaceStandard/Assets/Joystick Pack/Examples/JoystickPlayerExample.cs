@@ -9,23 +9,33 @@ public class JoystickPlayerExample : MonoBehaviour
     public VariableJoystick variableJoystick;
     public Rigidbody rb;
     public bool canMove;
+
+    public Animator playerAnimator;
     //public float h1, v1;
 
     private void Start()
     {
-        gameObject.GetComponent<Animator>().SetInteger("Movement",1);
+        playerAnimator = gameObject.GetComponent<Animator>();
+        playerAnimator.SetInteger("Movement",1);
     }
 
     public void FixedUpdate()
     {
         if (canMove)
         {
-            Vector3 direction = Vector3.forward * variableJoystick.Vertical + Vector3.right * variableJoystick.Horizontal;
-            rb.AddForce(direction * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
-            
             //Twist();
             float angle = Mathf.Atan2(variableJoystick.Horizontal, variableJoystick.Vertical) * Mathf.Rad2Deg; 
             this.transform.rotation =Quaternion.Euler(new Vector3(0, angle+180f, 0));
+            
+            Vector3 direction = Vector3.forward * variableJoystick.Vertical + Vector3.right * variableJoystick.Horizontal;
+            rb.AddForce(direction * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
+            
+            if(rb.velocity.magnitude > 4){
+                rb.velocity = Vector3.ClampMagnitude(rb.velocity, 4);
+            }
+
+            
+            
 
         }
         

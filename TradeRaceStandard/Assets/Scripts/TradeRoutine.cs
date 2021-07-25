@@ -30,6 +30,7 @@ public class TradeRoutine : MonoBehaviour
 
     IEnumerator PlayerHand(GameObject toy)
     {
+        
         GameObject obj =Instantiate(toy,playerHoldPos.transform.position,Quaternion.identity,playerHoldPos.transform);
         playerHand.transform.DOMoveZ(playerHand.transform.position.z + 2.6f, 1);
         yield return new WaitForSeconds(1f);

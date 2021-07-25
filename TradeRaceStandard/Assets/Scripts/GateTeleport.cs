@@ -15,6 +15,7 @@ public class GateTeleport : MonoBehaviour
     public Transform tradePosition;
     public GameObject sliderGO;
     public JoystickPlayerExample joystick;
+    public GameObject tradeHand,tradeUI;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class GateTeleport : MonoBehaviour
         {
             if (other.gameObject.GetComponent<CollectTradeObjects>().collectedObjects >= 5) ;
             {
+                player.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 player.GetComponent<Animator>().SetInteger("Movement",0);
                 joystick.canMove = false;
                 playerControl.SetActive(false);
@@ -41,9 +43,23 @@ public class GateTeleport : MonoBehaviour
                 sliderGO.SetActive(false);
                 player.transform.position = tradePosition.position;
                 //tradeCanvas.SetActive(true);
+                StartCoroutine(Delay());
             }
             
         }
+    }
+    
+    
+    IEnumerator Delay()
+    {
+
+            
+            yield return new WaitForSeconds(2f);
+            tradeHand.SetActive(true);
+            tradeUI.SetActive(true);
+
+        
+       
     }
     
     

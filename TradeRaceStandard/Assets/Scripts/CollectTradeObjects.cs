@@ -15,11 +15,16 @@ public class CollectTradeObjects : MonoBehaviour
     public GameObject holdingGO;
     private int spotCount;
     public bool isHolding;
+    public Rigidbody rb;
+    public Animator playerAnimator;
     
     // Start is called before the first frame update
     void Start()
     {
         spotCount = 0;
+        rb = gameObject.GetComponent<Rigidbody>();
+        playerAnimator = gameObject.GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -31,12 +36,28 @@ public class CollectTradeObjects : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        
+        if (rb.velocity.magnitude < 0.3f && !isHolding)
+        {
+            playerAnimator.SetInteger("Movement",0);
+
+        }
+        
+        if (rb.velocity.magnitude > 0.3f && !isHolding)
+        {
+            playerAnimator.SetInteger("Movement",1);
+
+        }
+    }
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("TradeObject") && !isHolding)
         {
             //Destroy(other.gameObject);
-            gameObject.GetComponent<Animator>().SetInteger("Movement",2);
+            playerAnimator.SetInteger("Movement",2);
             holdingGO = other.gameObject;
             holdingGO.GetComponent<Rigidbody>().useGravity = false;
 
@@ -61,7 +82,7 @@ public class CollectTradeObjects : MonoBehaviour
         {
             if (holdingGO)
             {
-                StartCoroutine(wait(0.5f));
+                StartCoroutine(wait(0.1f));
                 
 
             }
@@ -83,7 +104,7 @@ public class CollectTradeObjects : MonoBehaviour
         holdingGO.GetComponent<BoxCollider>().enabled = true;
         holdingGO.gameObject.tag = "Pushable";
         holdingGO = null;
-        gameObject.GetComponent<Animator>().SetInteger("Movement",1);
+        playerAnimator.SetInteger("Movement",1);
         isHolding = false;
         spotCount++;
 
