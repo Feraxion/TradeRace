@@ -11,6 +11,7 @@ public class TradeRoutine : MonoBehaviour
 
     public GameObject[] toys;
     public GameObject[] aiToys;
+    public ValueCalculator valueCalc;
     
     void Start()
     {

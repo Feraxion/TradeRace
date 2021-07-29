@@ -38,18 +38,33 @@ public class CollectTradeObjects : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
-        if (rb.velocity.magnitude < 0.3f && !isHolding)
+        if (gameObject.CompareTag("Player"))
         {
-            playerAnimator.SetInteger("Movement",0);
+            if (rb.velocity.magnitude < 0.3f && !isHolding)
+            {
+                playerAnimator.SetInteger("Movement",0);
 
+            }
+        
+            if (rb.velocity.magnitude > 0.3f && !isHolding)
+            {
+                playerAnimator.SetInteger("Movement",1);
+
+            }
+        }
+        else
+        {
+            if (!isHolding)
+            {
+                playerAnimator.SetInteger("Movement",1);
+
+            }
         }
         
-        if (rb.velocity.magnitude > 0.3f && !isHolding)
-        {
-            playerAnimator.SetInteger("Movement",1);
-
-        }
+        
+        
+        
+        
     }
 
     private void OnCollisionEnter(Collision other)
