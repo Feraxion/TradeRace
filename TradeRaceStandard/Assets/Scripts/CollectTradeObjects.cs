@@ -106,6 +106,7 @@ public class CollectTradeObjects : MonoBehaviour
                 {
                     case "Player":
                         other.GetComponent<DropOffPlacement>().AddStair(2);
+                        
 
                         return;
                 

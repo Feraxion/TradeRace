@@ -28,7 +28,7 @@ public class DropOffPlacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
         if (Input.GetKeyDown(KeyCode.A))
         {
             AddStair(1);
@@ -42,9 +42,8 @@ public class DropOffPlacement : MonoBehaviour
         switch (color)
         {
             case 1:
+                StartCoroutine(AddStairs(blueStairs[blue]));
                 
-                blueStairs[blue].SetActive(true);
-                blueStairs[blue].transform.DOScale(new Vector3(34.57f, 100f, 7.96f),1);
                 StartCoroutine(RotateLeftGO(blue1));
                 StartCoroutine(RotateRightGO(blue2));
                 blue++;
@@ -52,8 +51,8 @@ public class DropOffPlacement : MonoBehaviour
                 return;
             case 2:
 
-                redStairs[red].SetActive(true);
-                redStairs[red].transform.DOScale(new Vector3(34.57f, 100f, 7.96f),1);
+                StartCoroutine(AddStairs(redStairs[red]));
+
 
                 StartCoroutine(RotateLeftGO(red1));
                 StartCoroutine(RotateRightGO(red2));
@@ -62,8 +61,8 @@ public class DropOffPlacement : MonoBehaviour
                 return;
             case 3:
                 
-                greenStairs[green].SetActive(true);
-                greenStairs[green].transform.DOScale(new Vector3(34.57f, 100f, 7.96f),1);
+                StartCoroutine(AddStairs(greenStairs[green]));
+
 
                 StartCoroutine(RotateLeftGO(green1));
                 StartCoroutine(RotateRightGO(green2));
@@ -74,17 +73,31 @@ public class DropOffPlacement : MonoBehaviour
                 
         }
     }
+    
+    IEnumerator AddStairs(GameObject color)
+    {
+        yield return new WaitForSeconds(3f);
+        
+        color.SetActive(true);
+        color.transform.DOScale(new Vector3(34.57f, 100f, 7.96f),1);
+
+        
+        
+        
+
+        
+    }
 
     IEnumerator RotateLeftGO(GameObject leftGO)
     {
         
         //leftGO.transform.DORotate(openLeftPos,1);
-        leftGO.transform.DORotateQuaternion(Quaternion.Euler(openLeftPos),1);
+        leftGO.transform.DOLocalRotateQuaternion(Quaternion.Euler(openLeftPos),1);
 
         yield return new WaitForSeconds(3f);
         
         //leftGO.transform.DORotate(closedPos,1);
-        leftGO.transform.DORotateQuaternion(Quaternion.Euler(closedPos),1);
+        leftGO.transform.DOLocalRotateQuaternion(Quaternion.Euler(closedPos),1);
 
         
     }
@@ -92,12 +105,12 @@ public class DropOffPlacement : MonoBehaviour
     IEnumerator RotateRightGO(GameObject rightGO)
     {
         
-        rightGO.transform.DORotate(openRightPos,1,0);
+        rightGO.transform.DOLocalRotate(openRightPos,1,0);
         
 
         yield return new WaitForSeconds(3f);
         
-        rightGO.transform.DORotate(closedPos,1,0);
+        rightGO.transform.DOLocalRotate(closedPos,1,0);
         
     }
 }
