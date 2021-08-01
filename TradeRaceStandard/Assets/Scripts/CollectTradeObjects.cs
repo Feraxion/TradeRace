@@ -17,6 +17,7 @@ public class CollectTradeObjects : MonoBehaviour
     public bool isHolding;
     public Rigidbody rb;
     public Animator playerAnimator;
+    public DropOffPlacement dropOffScript;
     
     
     
@@ -101,23 +102,37 @@ public class CollectTradeObjects : MonoBehaviour
             
             if (holdingGO)
             {
-                StartCoroutine(wait(0.1f));
-                switch (gameObject.tag)
+                
+                switch (other.GetComponent<DropOffInfo>().color)
                 {
-                    case "Player":
-                        other.GetComponent<DropOffPlacement>().AddStair(2);
+                    case 1:
+                        
+                        if (gameObject.CompareTag("Player"))
+                        {
+                            dropOffScript.AddStair(2);
+                            StartCoroutine(wait(0.1f,0));
+                        }
                         
 
                         return;
                 
-                    case "GreenPlayer":
-                        other.GetComponent<DropOffPlacement>().AddStair(3);
+                    case 2:
+                        if (gameObject.CompareTag("GreenChar"))
+                        {
+                            dropOffScript.AddStair(3);
+                            StartCoroutine(wait(0.1f,1));
+
+                        }
 
                         return;
                 
-                    case "BluePlayer":
-                        other.GetComponent<DropOffPlacement>().AddStair(1);
+                    case 3:
+                        if (gameObject.CompareTag("BlueChar"))
+                        {
+                            dropOffScript.AddStair(1);
+                            StartCoroutine(wait(0.1f,2));
 
+                        }
                         return;
                 
                 }
@@ -129,12 +144,12 @@ public class CollectTradeObjects : MonoBehaviour
         }
     }
     
-    IEnumerator wait(float value)
+    IEnumerator wait(float value,int color)
     {
         yield return new WaitForSeconds(value);
         //toySpots[spotCount];
         holdingGO.transform.SetParent(null);
-        holdingGO.transform.DOMove(toySpots[spotCount].transform.position, 1);
+        holdingGO.transform.DOMove(toySpots[color].transform.position, 1);
 
         //holdingGO.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         holdingGO.GetComponent<Rigidbody>().useGravity = true;
@@ -143,7 +158,6 @@ public class CollectTradeObjects : MonoBehaviour
         holdingGO = null;
         playerAnimator.SetInteger("Movement",1);
         isHolding = false;
-        spotCount++;
 
 
     }
