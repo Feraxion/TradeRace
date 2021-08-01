@@ -18,6 +18,8 @@ public class CollectTradeObjects : MonoBehaviour
     public Rigidbody rb;
     public Animator playerAnimator;
     
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -95,10 +97,29 @@ public class CollectTradeObjects : MonoBehaviour
 
         if (other.gameObject.CompareTag("DropOff"))
         {
+
+            
             if (holdingGO)
             {
                 StartCoroutine(wait(0.1f));
+                switch (gameObject.tag)
+                {
+                    case "Player":
+                        other.GetComponent<DropOffPlacement>().AddStair(2);
+
+                        return;
                 
+                    case "GreenPlayer":
+                        other.GetComponent<DropOffPlacement>().AddStair(3);
+
+                        return;
+                
+                    case "BluePlayer":
+                        other.GetComponent<DropOffPlacement>().AddStair(1);
+
+                        return;
+                
+                }
 
             }
             

@@ -5,17 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class MenuUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public void PlayGame()
-    {
-       // GameSceneManager.Load(GameSceneManager.Scene.Level1);
-    }
+    // // Start is called before the first frame update
+    // public void PlayGame()
+    // {
+    //    // GameSceneManager.Load(GameSceneManager.Scene.Level1);
+    // }
     
     //OnClick Button
     public void StartGame()
     {
         GameManager.inst.playerState = GameManager.PlayerState.Playing;
         GameManager.inst.StartScreen.SetActive(false);
+        Debug.Log("Pressed");
     }
 
     public void SkipLevel()
@@ -27,8 +28,8 @@ public class MenuUI : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         //currentLevelDiamondCount = 0;
-        GameManager.inst.currentLevelDiamondCount = 0;
-        GameManager.inst.bonusMultiplier = 1;
+        //GameManager.inst.currentLevelDiamondCount = 0;
+        //GameManager.inst.bonusMultiplier = 1;
     }
 
     public void RestartGame()
