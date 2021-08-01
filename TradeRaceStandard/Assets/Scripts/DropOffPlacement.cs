@@ -10,7 +10,7 @@ public class DropOffPlacement : MonoBehaviour
     public GameObject[] redStairs;
     public GameObject[] greenStairs;
 
-    public GameObject red1, red2, blue1, blue2, green1, green2;
+    public GameObject red1, red2, blue1, blue2, green1, green2, playerBridgeWall;
 
     private Vector3 openLeftPos,openRightPos, closedPos;
 
@@ -29,12 +29,7 @@ public class DropOffPlacement : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            AddStair(1);
-            AddStair(2);
-            AddStair(3);
-        }
+       
     }
 
     public void AddStair(int color)
@@ -57,6 +52,11 @@ public class DropOffPlacement : MonoBehaviour
                 StartCoroutine(RotateLeftGO(red1));
                 StartCoroutine(RotateRightGO(red2));
                 red++;
+
+                if (red>4)
+                {
+                    playerBridgeWall.SetActive(false);
+                }
                 
                 return;
             case 3:
