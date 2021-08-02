@@ -5730,6 +5730,11 @@ MonoBehaviour:
   - {fileID: 6298151592380292238, guid: 7f73f87b1572fd74b89bc1eb9a46e469, type: 3}
   - {fileID: 3020579896018919808, guid: 5ef848adfd7dd084bb3d13f636728b91, type: 3}
   - {fileID: 937038170148744450, guid: b7d33e7ae8fae004ea193c126b2625fa, type: 3}
+  - {fileID: 4152701931293735666, guid: 8e358b5527c08814fa0aeb5fa70d792d, type: 3}
+  - {fileID: 2280827600789269753, guid: 5eb4f0d81dbfa0f4494505454ead6ec4, type: 3}
+  - {fileID: 937038170148744450, guid: b7d33e7ae8fae004ea193c126b2625fa, type: 3}
+  - {fileID: 2466919265405815497, guid: aa05aab41d5415a4c8d3d04a51371045, type: 3}
+  - {fileID: 4720382032820739058, guid: 1650e8b6303e7e64a9517d9fcaca9331, type: 3}
   valueCalc: {fileID: 1034209795}
 --- !u!114 &1034209797
 MonoBehaviour:
@@ -6009,7 +6014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8292949961103399937, guid: 61cec80be128fea4eb22579c0dd4479f, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8292949961412913754, guid: 61cec80be128fea4eb22579c0dd4479f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -11552,6 +11557,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed4c355d0ef85f4aa33766574125361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  white: {fileID: 2100000, guid: b44e34862b91d2c429abe86a8a81f44a, type: 2}
+  green: {fileID: 2100000, guid: 491c8c7f48e25cb44b45b3b5abe83a94, type: 2}
 --- !u!1 &1189493735737899533
 GameObject:
   m_ObjectHideFlags: 0
@@ -12622,6 +12629,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed4c355d0ef85f4aa33766574125361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  white: {fileID: 2100000, guid: b44e34862b91d2c429abe86a8a81f44a, type: 2}
+  green: {fileID: 2100000, guid: 491c8c7f48e25cb44b45b3b5abe83a94, type: 2}
 --- !u!1 &3320363688016691655
 GameObject:
   m_ObjectHideFlags: 0
@@ -13702,6 +13711,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed4c355d0ef85f4aa33766574125361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  white: {fileID: 2100000, guid: b44e34862b91d2c429abe86a8a81f44a, type: 2}
+  green: {fileID: 2100000, guid: 491c8c7f48e25cb44b45b3b5abe83a94, type: 2}
 --- !u!23 &5645033194762305771
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14053,6 +14064,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed4c355d0ef85f4aa33766574125361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  white: {fileID: 0}
+  green: {fileID: 0}
 --- !u!23 &6777059278086919296
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14611,6 +14624,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed4c355d0ef85f4aa33766574125361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  white: {fileID: 0}
+  green: {fileID: 0}
 --- !u!23 &7726287003989283999
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15198,6 +15213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed4c355d0ef85f4aa33766574125361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  white: {fileID: 0}
+  green: {fileID: 0}
 --- !u!4 &8653059853066242012
 Transform:
   m_ObjectHideFlags: 0
@@ -15374,7 +15391,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 491c8c7f48e25cb44b45b3b5abe83a94, type: 2}
+  - {fileID: 2100000, guid: b44e34862b91d2c429abe86a8a81f44a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
