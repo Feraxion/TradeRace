@@ -17,14 +17,23 @@ public class TradeObjectValue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Instantiate(particleEffect, gameObject.transform.position, Quaternion.identity);
-        }
+            Instantiate(particleEffect, gameObject.transform.position, Quaternion.identity,gameObject.transform);
+            Debug.Log("asd");
+        }    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
+
+    IEnumerator waitForSeconds()
+    {
+        yield return new WaitForSeconds(3f);
     }
 }

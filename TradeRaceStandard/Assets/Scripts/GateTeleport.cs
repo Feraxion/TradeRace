@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class GateTeleport : MonoBehaviour
 {
-    public GameObject tradeCanvas;
 
     public GameObject gameplayCamera;
 
@@ -15,7 +14,7 @@ public class GateTeleport : MonoBehaviour
     public Transform tradePosition;
     public GameObject sliderGO;
     public JoystickPlayerExample joystick;
-    public GameObject tradeHand,tradeHand2,tradeUI;
+    public GameObject tradeHand,tradeUI;
 
     // Start is called before the first frame update
     void Start()
@@ -57,7 +56,6 @@ public class GateTeleport : MonoBehaviour
             yield return new WaitForSeconds(2f);
             tradeHand.SetActive(true);
             tradeUI.SetActive(true);
-            tradeHand2.SetActive(true);
 
         
        

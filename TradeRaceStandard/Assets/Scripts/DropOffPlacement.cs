@@ -82,15 +82,12 @@ public class DropOffPlacement : MonoBehaviour
         color.transform.DOScale(new Vector3(34.57f, 100f, 7.96f),1);
 
         
-        
-        
-
-        
     }
 
     IEnumerator RotateLeftGO(GameObject leftGO)
     {
-        
+        yield return new WaitForSeconds(1f);
+
         //leftGO.transform.DORotate(openLeftPos,1);
         leftGO.transform.DOLocalRotateQuaternion(Quaternion.Euler(openLeftPos),1);
 
@@ -104,7 +101,8 @@ public class DropOffPlacement : MonoBehaviour
     
     IEnumerator RotateRightGO(GameObject rightGO)
     {
-        
+        yield return new WaitForSeconds(1f);
+
         rightGO.transform.DOLocalRotate(openRightPos,1,0);
         
 

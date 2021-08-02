@@ -12,6 +12,7 @@ public class TradeRoutine : MonoBehaviour
     public GameObject[] toys;
     public GameObject[] aiToys;
     public ValueCalculator valueCalc;
+    private int turn = 0;
     
     void Start()
     {
@@ -34,28 +35,28 @@ public class TradeRoutine : MonoBehaviour
     {
         
         GameObject obj =Instantiate(toy,playerHoldPos.transform.position,Quaternion.identity,playerHoldPos.transform);
-        playerHand.transform.DOMoveZ(playerHand.transform.position.z + 2.6f, 1);
+        playerHand.transform.DOMoveX(playerHand.transform.position.x + 1.15f, 1);
         
         yield return new WaitForSeconds(1f);
         
         obj.transform.SetParent(null);
-        playerHand.transform.DOMoveZ(playerHand.transform.position.z - 2.6f, 1);
-        
+        playerHand.transform.DOMoveX(playerHand.transform.position.x - 1.15f, 1);
         yield return new WaitForSeconds(1f);
-        StartCoroutine(AITurn(toys[0]));
-        
+        StartCoroutine(AITurn(toys[turn]));
+
     }
     
     IEnumerator AITurn(GameObject toy)
     {
         
         GameObject obj =Instantiate(toy,opponentHoldPos.transform.position,Quaternion.identity,opponentHoldPos.transform);
-        opponentHand.transform.DOMoveZ(opponentHand.transform.position.z - 2.6f, 1);
+        opponentHand.transform.DOMoveX(opponentHand.transform.position.x - 0.5f, 1);
         
         yield return new WaitForSeconds(1f);
         
         obj.transform.SetParent(null);
-        opponentHand.transform.DOMoveZ(opponentHand.transform.position.z + 2.6f, 1);
+        opponentHand.transform.DOMoveX(opponentHand.transform.position.x + 0.5f, 1);
+        turn++;
 
     }
     

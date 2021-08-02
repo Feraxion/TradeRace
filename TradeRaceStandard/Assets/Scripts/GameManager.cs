@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
     {
         if (playerState == PlayerState.Prepare)
         {
-            StartScreen.SetActive(true);
+            //StartScreen.SetActive(true);
 
         }
 
