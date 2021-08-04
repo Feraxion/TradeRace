@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: bulut
+  m_Name: Kirmizi 1
   m_Shader: {fileID: -6465566751694194690, guid: ec02e605f4adaf34c8232de973ac9760, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -48,9 +48,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_5246AA5D: 2.25
-    - Vector1_A0BEB753: 1
-    - Vector1_ED9A46CC: 1
+    - Vector1_5246AA5D: 1.5
+    - Vector1_A0BEB753: 0.1
+    - Vector1_ED9A46CC: 0.709
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -73,16 +73,16 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_128B3F85: {r: 1.3021153, g: 1.3021153, b: 1.3021153, a: 0}
-    - Color_2A4B2485: {r: 0.8558929, g: 0.8558929, b: 0.8558929, a: 0}
-    - Color_8159753D: {r: 0.64421505, g: 0.89097244, b: 0.9056604, a: 1}
-    - Color_CFD2EF7E: {r: 0, g: 0, b: 0, a: 0}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - Color_128B3F85: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 0}
+    - Color_2A4B2485: {r: 0.7169812, g: 0.44304025, b: 0.44304025, a: 0}
+    - Color_8159753D: {r: 0.41509432, g: 0.084640786, b: 0.07988606, a: 0}
+    - Color_CFD2EF7E: {r: 2.418255, g: 2.3612208, b: 2.3612208, a: 0}
+    - _BaseColor: {r: 1, g: 0.044258744, b: 0, a: 1}
+    - _Color: {r: 1, g: 0.044258744, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &7546541852821521798
+--- !u!114 &2559904385309054160
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,4 +94,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 2
+  version: 1
