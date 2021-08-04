@@ -79,7 +79,7 @@ public class DropOffPlacement : MonoBehaviour
         yield return new WaitForSeconds(1f);
         
         color.SetActive(true);
-        color.transform.DOScale(new Vector3(34.57f, 100f, 7.96f),1);
+        color.transform.DOScale(new Vector3(34.57f, 92f, 7.96f),1);
 
         
     }
@@ -91,7 +91,7 @@ public class DropOffPlacement : MonoBehaviour
         //leftGO.transform.DORotate(openLeftPos,1);
         leftGO.transform.DOLocalRotateQuaternion(Quaternion.Euler(openLeftPos),1);
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.4f);
         
         //leftGO.transform.DORotate(closedPos,1);
         leftGO.transform.DOLocalRotateQuaternion(Quaternion.Euler(closedPos),1);
@@ -106,7 +106,7 @@ public class DropOffPlacement : MonoBehaviour
         rightGO.transform.DOLocalRotate(openRightPos,1,0);
         
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.4f);
         
         rightGO.transform.DOLocalRotate(closedPos,1,0);
         

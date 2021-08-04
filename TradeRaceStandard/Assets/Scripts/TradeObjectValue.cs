@@ -23,7 +23,7 @@ public class TradeObjectValue : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Instantiate(particleEffect, gameObject.transform.position, Quaternion.identity,gameObject.transform);
+            //Instantiate(particleEffect, gameObject.transform.position, Quaternion.identity,gameObject.transform);
             Debug.Log("asd");
         }    }
 

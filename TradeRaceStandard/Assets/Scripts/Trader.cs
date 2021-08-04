@@ -90,7 +90,7 @@ public class Trader : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         iksolver.target = standby.transform;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         iksolver.enabled = false;
     }

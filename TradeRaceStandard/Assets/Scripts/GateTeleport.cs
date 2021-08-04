@@ -53,7 +53,7 @@ public class GateTeleport : MonoBehaviour
     {
 
             
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(3f);
             tradeHand.SetActive(true);
             tradeUI.SetActive(true);
 
