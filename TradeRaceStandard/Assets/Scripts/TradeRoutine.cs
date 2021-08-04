@@ -48,7 +48,7 @@ public class TradeRoutine : MonoBehaviour
     
     IEnumerator AITurn(GameObject toy)
     {
-        
+        //opponentHand.GetComponent<Trader>().HandToTrade();
         GameObject obj =Instantiate(toy,opponentHoldPos.transform.position,Quaternion.identity,opponentHoldPos.transform);
         opponentHand.transform.DOMoveX(opponentHand.transform.position.x - 0.5f, 1);
         

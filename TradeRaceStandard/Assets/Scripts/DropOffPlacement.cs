@@ -76,7 +76,7 @@ public class DropOffPlacement : MonoBehaviour
     
     IEnumerator AddStairs(GameObject color)
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         
         color.SetActive(true);
         color.transform.DOScale(new Vector3(34.57f, 100f, 7.96f),1);

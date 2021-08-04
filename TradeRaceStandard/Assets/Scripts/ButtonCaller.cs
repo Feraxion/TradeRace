@@ -32,7 +32,7 @@ public class ButtonCaller : MonoBehaviour
         
         myRenderer.material.Lerp(white,green,1f);
         //myRenderer.material.SetColor("MainColor",Color.Lerp(Color.white,Color.green, 1f ) );
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.4f);
         
         myRenderer.material.Lerp(green,white,1f);
 

@@ -30,7 +30,7 @@ public class JoystickPlayerExample : MonoBehaviour
             Vector3 direction = Vector3.forward * variableJoystick.Vertical + Vector3.right * variableJoystick.Horizontal;
             rb.AddForce(direction * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
             
-            if(rb.velocity.magnitude > 4){
+            if(rb.velocity.magnitude > 3){
                 rb.velocity = Vector3.ClampMagnitude(rb.velocity, 4);
             }
 
