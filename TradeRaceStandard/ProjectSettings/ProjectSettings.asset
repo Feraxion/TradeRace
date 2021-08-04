@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: TradeRaceStandard
+  companyName: SkipGames
+  productName: Trade Race
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -126,7 +126,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 17
+  bundleVersion: 22
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -170,12 +170,12 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.TradeRaceStandard
+    Android: com.SkipGames.TradeRace
     iPhone: com.SkipGames.TradeRace
   buildNumber: {}
-  AndroidBundleVersionCode: 17
+  AndroidBundleVersionCode: 22
   AndroidMinSdkVersion: 19
-  AndroidTargetSdkVersion: 0
+  AndroidTargetSdkVersion: 30
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1
@@ -251,8 +251,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 2
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/aybarskesebir.dev/Desktop/Skip Games/keystore/TradeRace
-    keystore.keystore
+  AndroidKeystoreName: '{dedicated}: TradeRace keystore.keystore'
   AndroidKeyaliasName: traderace
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
