@@ -34,6 +34,6 @@ public class AdCameraMovement : MonoBehaviour
         yield return new WaitForSeconds(2.8f);
         ai1.GetComponent<NavMeshAgent>().enabled = true;
         ai2.GetComponent<NavMeshAgent>().enabled = true;
-        
+        adCam.gameObject.SetActive(false);
     }
 }
