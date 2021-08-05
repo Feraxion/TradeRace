@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ZeminMat
+  m_Name: YesMat 2
   m_Shader: {fileID: -6465566751694194690, guid: ec02e605f4adaf34c8232de973ac9760, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: b980d8c9110c7be4a884a1dafb428360, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -32,7 +32,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b980d8c9110c7be4a884a1dafb428360, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -48,9 +48,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_5246AA5D: 0.9
-    - Vector1_A0BEB753: 1
-    - Vector1_ED9A46CC: 1
+    - Vector1_5246AA5D: 8.9
+    - Vector1_A0BEB753: 0.656
+    - Vector1_ED9A46CC: 0.803
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -65,6 +65,7 @@ Material:
     - _OcclusionStrength: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _SampleGI: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -73,11 +74,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_128B3F85: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 0}
-    - Color_2A4B2485: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 0}
-    - Color_8159753D: {r: 1, g: 1, b: 1, a: 0}
-    - Color_CFD2EF7E: {r: 8, g: 8, b: 8, a: 0}
-    - _BaseColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    - Color_128B3F85: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 0}
+    - Color_2A4B2485: {r: 0.754717, g: 0.754717, b: 0.754717, a: 0}
+    - Color_8159753D: {r: 0.4324337, g: 0.8396226, b: 0.38337484, a: 0}
+    - Color_CFD2EF7E: {r: 1.0076064, g: 1.0076064, b: 1.0076064, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
