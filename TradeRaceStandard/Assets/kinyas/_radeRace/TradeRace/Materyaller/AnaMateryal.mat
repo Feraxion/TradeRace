@@ -8,8 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AnaMateryal
-  m_Shader: {fileID: -6465566751694194690, guid: ec02e605f4adaf34c8232de973ac9760,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: ec02e605f4adaf34c8232de973ac9760, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -49,9 +48,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_5246AA5D: 11.91
-    - Vector1_A0BEB753: 0.271
-    - Vector1_ED9A46CC: 0.841
+    - Vector1_5246AA5D: 26.22
+    - Vector1_A0BEB753: 0.91
+    - Vector1_ED9A46CC: 0.662
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -74,14 +73,15 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_128B3F85: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 0}
+    - Color_128B3F85: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 0}
     - Color_2A4B2485: {r: 1, g: 1, b: 1, a: 0}
-    - Color_8159753D: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 0}
-    - Color_CFD2EF7E: {r: 1.0076064, g: 1.0076064, b: 1.0076064, a: 0}
+    - Color_8159753D: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 0}
+    - Color_CFD2EF7E: {r: 1.3452337, g: 1.3452337, b: 1.3452337, a: 0}
     - _BaseColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  m_BuildTextureStacks: []
 --- !u!114 &8243394459288586329
 MonoBehaviour:
   m_ObjectHideFlags: 11

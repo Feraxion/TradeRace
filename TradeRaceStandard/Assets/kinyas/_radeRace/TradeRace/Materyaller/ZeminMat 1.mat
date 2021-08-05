@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mavi 1
+  m_Name: ZeminMat 1
   m_Shader: {fileID: -6465566751694194690, guid: ec02e605f4adaf34c8232de973ac9760, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b980d8c9110c7be4a884a1dafb428360, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -32,7 +32,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b980d8c9110c7be4a884a1dafb428360, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -48,9 +48,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_5246AA5D: 21
-    - Vector1_A0BEB753: 0.1
-    - Vector1_ED9A46CC: 0.7
+    - Vector1_5246AA5D: 0.9
+    - Vector1_A0BEB753: 0.639
+    - Vector1_ED9A46CC: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -73,16 +73,16 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_128B3F85: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 0}
-    - Color_2A4B2485: {r: 0.49056602, g: 0.4697401, b: 0.4697401, a: 0}
-    - Color_8159753D: {r: 0.31641153, g: 0.4390175, b: 0.8301887, a: 0}
-    - Color_CFD2EF7E: {r: 0.46515444, g: 1.3549361, b: 2.3040364, a: 0}
-    - _BaseColor: {r: 0.22696589, g: 0.46207702, b: 0.6104958, a: 1}
-    - _Color: {r: 0.22696589, g: 0.46207702, b: 0.6104958, a: 1}
+    - Color_128B3F85: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 0}
+    - Color_2A4B2485: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0}
+    - Color_8159753D: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 0}
+    - Color_CFD2EF7E: {r: 2.418255, g: 2.418255, b: 2.418255, a: 0}
+    - _BaseColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &3633365843584705510
+--- !u!114 &8243394459288586329
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
