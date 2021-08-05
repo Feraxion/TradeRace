@@ -28,11 +28,10 @@ public class JoystickPlayerExample : MonoBehaviour
             this.transform.rotation =Quaternion.Euler(new Vector3(0, angle+180f, 0));
             
             Vector3 direction = Vector3.forward * variableJoystick.Vertical + Vector3.right * variableJoystick.Horizontal;
-            rb.AddForce(direction * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
+            //rb.AddForce(direction * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
+            rb.AddForce(direction*speed*Time.fixedDeltaTime,ForceMode.Impulse);
             
-            if(rb.velocity.magnitude > 2){
-                rb.velocity = Vector3.ClampMagnitude(rb.velocity, 2f);
-            }
+            
 
             
             
@@ -40,7 +39,9 @@ public class JoystickPlayerExample : MonoBehaviour
         }
         
         
-        
+        if(rb.velocity.magnitude > 1.5f){
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, 1.5f);
+        }
         
     }
     

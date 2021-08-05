@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class TradeRoutine : MonoBehaviour
 {
-    
-    public GameObject playerHand, opponentHand;
-    public GameObject playerHoldPos, opponentHoldPos;
+   
+    public TradeObjectThrower throwerScript;
+    public TradeObjectThrower throwerScript2;
 
     public GameObject[] toys;
     public GameObject[] aiToys;
@@ -21,7 +21,7 @@ public class TradeRoutine : MonoBehaviour
     
     void Update()
     {
-        
+       
     }
 
     public void PlayerTurn(int toyArray)
@@ -33,29 +33,34 @@ public class TradeRoutine : MonoBehaviour
 
     IEnumerator PlayerHand(GameObject toy)
     {
+        throwerScript.ThrowObject(toy);
         
-        GameObject obj =Instantiate(toy,playerHoldPos.transform.position,Quaternion.identity,playerHoldPos.transform);
-        playerHand.transform.DOMoveX(playerHand.transform.position.x + 1.15f, 1);
+        //GameObject obj =Instantiate(toy,playerHoldPos.transform.position,Quaternion.identity,playerHoldPos.transform);
+        //playerHand.transform.DOMoveX(playerHand.transform.position.x + 1.15f, 1);
         
         yield return new WaitForSeconds(1f);
         
-        obj.transform.SetParent(null);
-        playerHand.transform.DOMoveX(playerHand.transform.position.x - 1.15f, 1);
+       // obj.transform.SetParent(null);
+        //playerHand.transform.DOMoveX(playerHand.transform.position.x - 1.15f, 1);
         yield return new WaitForSeconds(1f);
-        StartCoroutine(AITurn(toys[turn]));
+        StartCoroutine(AITurn(aiToys[turn]));
 
     }
     
     IEnumerator AITurn(GameObject toy)
     {
+        
+        throwerScript2.ThrowObject(toy);
+
+        
         //opponentHand.GetComponent<Trader>().HandToTrade();
-        GameObject obj =Instantiate(toy,opponentHoldPos.transform.position,Quaternion.identity,opponentHoldPos.transform);
-        opponentHand.transform.DOMoveX(opponentHand.transform.position.x - 0.5f, 1);
+       // GameObject obj =Instantiate(toy,opponentHoldPos.transform.position,Quaternion.identity,opponentHoldPos.transform);
+       // opponentHand.transform.DOMoveX(opponentHand.transform.position.x - 0.5f, 1);
         
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
         
-        obj.transform.SetParent(null);
-        opponentHand.transform.DOMoveX(opponentHand.transform.position.x + 0.5f, 1);
+        //obj.transform.SetParent(null);
+        //opponentHand.transform.DOMoveX(opponentHand.transform.position.x + 0.5f, 1);
         turn++;
 
     }

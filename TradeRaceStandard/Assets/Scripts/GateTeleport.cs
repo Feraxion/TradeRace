@@ -14,7 +14,7 @@ public class GateTeleport : MonoBehaviour
     public Transform tradePosition;
     public GameObject sliderGO;
     public JoystickPlayerExample joystick;
-    public GameObject tradeHand,tradeUI;
+    public GameObject tradeUI;
 
     // Start is called before the first frame update
     void Start()
@@ -54,7 +54,6 @@ public class GateTeleport : MonoBehaviour
 
             
             yield return new WaitForSeconds(3f);
-            tradeHand.SetActive(true);
             tradeUI.SetActive(true);
 
         
